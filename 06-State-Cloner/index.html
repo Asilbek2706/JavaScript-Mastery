@@ -5,7 +5,27 @@
   <title>State Cloner</title>
   <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="app"></div>
+<div id="container">
+  <h2>Object Cloning Lab</h2>
+
+  <div class="display">
+    <div class="box">
+      <h4>Real Object (Original)</h4>
+      <pre id="original-view"></pre>
+    </div>
+    <div class="box">
+      <h4>Copy (Cloned)</h4>
+      <pre id="cloned-view"></pre>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="app.shallowCopy()">Shallow Copy & Change</button>
+    <button onclick="app.deepCopy()">Deep Copy & Change</button>
+    <button onclick="app.reset()">Reset</button>
+  </div>
+  <p id="msg"></p>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
