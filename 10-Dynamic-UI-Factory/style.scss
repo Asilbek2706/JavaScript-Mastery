@@ -1,5 +1,143 @@
+// 1. O'zgaruvchilar
+$primary: #6366f1;
+$success: #10b981;
+$danger: #ef4444;
+$dark: #1f2937;
+$bg-gradient: radial-gradient(circle at top right, #1e293b, #0f172a);
+$glass-bg: rgba(255, 255, 255, 0.05);
+$transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// 2. Base Setup
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1a1a1a;
+  background: $bg-gradient;
   color: white;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+// 3. Controls (Buttons) Area
+.controls {
+  background: $glass-bg;
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition;
+    background: #334155;
+    color: white;
+
+    &:hover {
+      transform: translateY(-2px);
+      background: lighten(#334155, 10%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// 4. Factory Floor (Display Area)
+.display-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  min-height: 200px;
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+// 5. Dynamic Elements (Generated via JS)
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  animation: slideIn 0.4s ease-out;
+
+  &-success {
+    background: $success;
+    box-shadow: 0 4px 14px rgba($success, 0.4);
+  }
+
+  &-danger {
+    background: $danger;
+    box-shadow: 0 4px 14px rgba($danger, 0.4);
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+  }
+}
+
+.ui-card {
+  background: white;
+  color: $dark;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    margin: 0 0 10px 0;
+    color: $primary;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  &:hover {
+    transform: rotate(2deg) scale(1.02);
+  }
+}
+
+// 6. Animations
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }

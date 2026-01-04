@@ -5,7 +5,18 @@
   <title>Dynamic UI Factory</title>
   <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="app"></div>
+<div class="container">
+  <h2>Dynamic UI Factory</h2>
+
+  <div class="controls">
+    <button onclick="app.create('success')">Success Button</button>
+    <button onclick="app.create('danger')">Danger Button</button>
+    <button onclick="app.create('card')">Info Card</button>
+  </div>
+
+  <div id="factory-floor" class="display-area">
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
