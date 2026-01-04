@@ -5,7 +5,19 @@
   <title>Context Binding</title>
   <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="app"></div>
+  <div class="container">
+    <h2>Context Binding Lab (this)</h2>
+
+    <div id="display" class="screen">
+      Click the buttons and see the result...
+    </div>
+
+    <div class="controls">
+      <button onclick="app.useCall()">Call Metodi</button>
+      <button onclick="app.useApply()">Apply Metodi</button>
+      <button onclick="app.useBind()">Bind Metodi</button>
+    </div>
+  </div>
 <script src="script.js"></script>
 </body>
 </html>
