@@ -2,10 +2,56 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <title>Super Dashboard Final</title>
-  <link rel="stylesheet" href="style.css"> </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Mastery - Ultimate Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-<div id="app"></div>
+<div class="app-container">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo-icon"></div>
+      <span>JS PRO</span>
+    </div>
+    <nav class="menu">
+      <a href="#" class="menu-item active">Dashboard</a>
+      <a href="#" class="menu-item">Analytics</a>
+      <a href="#" class="menu-item">System Log</a>
+    </nav>
+    <div class="memory-monitor">
+      <div class="monitor-header">
+        <span>RAM Usage</span>
+        <span id="mem-percent">0%</span>
+      </div>
+      <div class="progress-track">
+        <div id="mem-bar" class="progress-fill"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="search-wrapper">
+        <input type="text" id="main-search" placeholder="Quick search users (Debounce)...">
+      </div>
+      <div class="user-info">
+        <span class="status-dot"></span>
+        <span id="user-name">Asilbek Admin</span>
+      </div>
+    </header>
+
+    <section class="stats-container" id="widget-factory">
+    </section>
+
+    <section class="bottom-section">
+      <div class="data-table-card">
+        <h3>Live System Feed</h3>
+        <div id="log-stream" class="log-stream"></div>
+      </div>
+    </section>
+  </main>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
