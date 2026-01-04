@@ -2,10 +2,30 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <title>EventLoop Simulator</title>
+  <title>Event Loop Simulator</title>
   <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="app"></div>
+  <div id="container">
+    <h2>Event Loop Visualization</h2>
+    <div id="controls">
+      <button id="run-sync">1. Using Sync Code</button>
+      <button id="run-async">2. Using Async Code</button>
+    </div>
+
+    <div class="display">
+      <div class="box stack">
+        <h3>Call Stack</h3>
+        <ul id="stack-list"></ul>
+      </div>
+      <div class="box queue">
+        <h3>Task Queue</h3>
+        <ul id="queue-list"></ul>
+      </div>
+    </div>
+    <div id="console-log" class="console">
+      <p>> Console results will appear here... </p>
+    </div>
+  </div>
 <script src="script.js"></script>
 </body>
 </html>
