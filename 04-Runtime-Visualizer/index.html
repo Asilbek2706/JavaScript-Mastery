@@ -5,7 +5,23 @@
   <title>Runtime Vizualizer</title>
   <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="app"></div>
+    <div id="container">
+        <h2>Performance Tester</h2>
+        <p>Processing speed for an array of 1 million elements:</p>
+
+        <button id="start-test">Start the test</button>
+
+        <div class="results">
+            <div class="result-item">
+              <span>Foor Loop:</span>
+              <span id="for-time">0 ms</span>
+            </div>
+            <div class="result-item">
+              <span>ForEach:</span>
+              <span id="foreach-time">0 ms</span>
+            </div>
+        </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
