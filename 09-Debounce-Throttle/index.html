@@ -5,7 +5,23 @@
   <title>Debounce Throttle</title>
   <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="app"></div>
+<div class="container">
+  <h2>Debounce & Throttle Lab</h2>
+
+  <div class="test-area">
+    <label>Debounce Test (Search):</label>
+    <input type="text" id="debounce-input" placeholder="Start typing...">
+    <p>Requests sent: <span id="debounce-count">0</span> times</p>
+  </div>
+
+  <hr>
+
+  <div class="test-area">
+    <label>Normal Test (Every keystroke):</label>
+    <input type="text" id="normal-input" placeholder="Start typing...">
+    <p>Requests sent: <span id="normal-count">0</span> times</p>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
